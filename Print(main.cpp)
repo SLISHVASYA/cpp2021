@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+void print(int *integer){
+    
+    for(int i = 0; i < 4; i++){
+        cout << integer[i] << " ";
+        }; cout << '\n';
+};
+
+void print(float *floater){
+    for(int i = 0; i < 4; i++){
+        cout << floater[i] << " ";
+        }; cout << '\n';
+};
+
+void print(char *worder){
+    while(*worder){cout << *worder; worder++;}; cout <<'\n';
+};
+
+int main()
+{
+    print("Testing");
+    int a[] = {1, 2, 3, 4};
+    float b[] = {5, 6, 7, 8};
+    print(a);
+    print(b);
+    return 0;
+}
