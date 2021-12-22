@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Box{
+    
+public:  
+
+    int a,b,c;
+    int volume(); int perimetr();
+    
+    Box(int a1, int b1, int c1){
+        a = a1;
+        b = b1;
+        c = c1;
+    }
+    
+    
+    ~Box(){cout <<"No more box\n";}
+};
+
+int Box::volume(){
+    return a*b*c;
+    }
+int Box::perimetr(){
+    return a*b;
+    }
+
+int main()
+{
+    Box box1(3,12,9);
+    cout << "New box" << '\n';
+    cout << "Volume: " <<box1.volume()<< '\n';
+    cout << "Perimetr: "<< box1.perimetr()<< '\n'<< '\n';
+    Box box2(12,1,5);
+    cout << "New box" << '\n';
+    cout << "Volume: "<< box2.volume()<< '\n';
+    cout << "Perimetr: "<< box2.perimetr()<< '\n'<< '\n';
+    Box box3(7,6,5);
+    cout << "New box" << '\n';
+    cout << "Volume: "<< box3.volume()<< '\n';
+    cout << "Perimetr: "<< box3.perimetr()<< '\n'<< '\n';
+
+    return 0;
+}
